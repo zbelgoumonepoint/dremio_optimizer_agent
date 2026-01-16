@@ -32,10 +32,34 @@ class QueryLoader(BaseLoader):
         duration_ms = None
 
         if query_data.get("startTime"):
-            start_time = datetime.fromtimestamp(query_data["startTime"] / 1000.0)
+            start_time_val = query_data["startTime"]
+            # Handle both string and numeric timestamps
+            if isinstance(start_time_val, str):
+                # Try parsing as ISO format first, then as numeric string
+                try:
+                    start_time = datetime.fromisoformat(start_time_val.replace('Z', '+00:00'))
+                except:
+                    try:
+                        start_time = datetime.fromtimestamp(float(start_time_val) / 1000.0)
+                    except:
+                        start_time = None
+            else:
+                start_time = datetime.fromtimestamp(start_time_val / 1000.0)
 
         if query_data.get("endTime"):
-            end_time = datetime.fromtimestamp(query_data["endTime"] / 1000.0)
+            end_time_val = query_data["endTime"]
+            # Handle both string and numeric timestamps
+            if isinstance(end_time_val, str):
+                # Try parsing as ISO format first, then as numeric string
+                try:
+                    end_time = datetime.fromisoformat(end_time_val.replace('Z', '+00:00'))
+                except:
+                    try:
+                        end_time = datetime.fromtimestamp(float(end_time_val) / 1000.0)
+                    except:
+                        end_time = None
+            else:
+                end_time = datetime.fromtimestamp(end_time_val / 1000.0)
 
         if start_time and end_time:
             duration_ms = int((end_time - start_time).total_seconds() * 1000)
