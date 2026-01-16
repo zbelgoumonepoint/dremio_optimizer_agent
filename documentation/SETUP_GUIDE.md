@@ -3,9 +3,25 @@
 ## Prerequisites
 
 1. **Python 3.11+**
-2. **PostgreSQL** (for storing optimization data)
-3. **Dremio** with admin access
-4. **Dremio Personal Access Token** (recommended) or username/password
+2. **UV** (fast Python package installer) - Recommended
+3. **PostgreSQL** (for storing optimization data)
+4. **Dremio** with admin access
+5. **Dremio Personal Access Token** (recommended) or username/password
+
+### Install UV (Recommended)
+
+UV is a fast Python package installer and environment manager:
+
+```bash
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or using pip
+pip install uv
+
+# Verify installation
+uv --version
+```
 
 ## Step 1: Generate Dremio Personal Access Token
 
@@ -25,19 +41,65 @@ The token will look something like:
 dremio_pat_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-## Step 2: Install Dependencies
+## Step 2: Create UV Virtual Environment
+
+**IMPORTANT**: Always work within the UV virtual environment for this project.
 
 ```bash
 cd dremio_optimizer_agent
 
-# Using Poetry (recommended)
+# Create UV virtual environment
+uv venv
+
+# Activate the environment
+source .venv/bin/activate
+
+# Your prompt should now show (.venv)
+```
+
+## Step 3: Install Dependencies
+
+```bash
+# Make sure you're in the UV environment (you should see .venv in your prompt)
+
+# Install all dependencies using UV (faster than pip)
+uv pip install fastapi "uvicorn[standard]" sqlalchemy psycopg2-binary pydantic pydantic-settings requests python-dotenv langchain langgraph langchain-openai opentelemetry-api opentelemetry-sdk python-loki certifi
+
+# Verify installation
+python -c "from src.clients.dremio_client import DremioClient; print('✓ Installation successful!')"
+```
+
+### Alternative: Using Poetry or pip
+
+If you prefer not to use UV:
+
+```bash
+# Using Poetry
 poetry install
 
 # OR using pip
 pip install -e .
 ```
 
-## Step 3: Configure Environment
+### ⚠️ Important: Always Activate UV Environment
+
+**Before running any scripts or commands**, always activate the UV environment:
+
+```bash
+cd /path/to/dremio_optimizer_agent
+source .venv/bin/activate
+```
+
+To make this easier, you can add an alias to your shell profile (`~/.zshrc` or `~/.bashrc`):
+
+```bash
+# Add this to ~/.zshrc or ~/.bashrc
+alias dremio-env='cd /Users/z.belgoum/projects/dremio_optimizer_agent && source .venv/bin/activate'
+```
+
+Then just run `dremio-env` to activate the environment and navigate to the project!
+
+## Step 4: Configure Environment
 
 ### Create .env file:
 ```bash
@@ -80,7 +142,7 @@ DATABASE_URL=postgresql://user:password@localhost:5432/dremio_optimizer
 OPENAI_API_KEY=sk-your-key-here
 ```
 
-## Step 4: Setup PostgreSQL Database
+## Step 5: Setup PostgreSQL Database
 
 ### Create Database:
 ```bash
@@ -93,6 +155,10 @@ psql -U postgres -c "CREATE DATABASE dremio_optimizer;"
 
 ### Initialize Tables:
 ```bash
+# Make sure UV environment is activated!
+source .venv/bin/activate
+
+# Then run setup
 python scripts/setup_db.py
 ```
 
@@ -111,7 +177,13 @@ Tables created:
   - dataset_metadata
 ```
 
-## Step 5: Test Connection
+## Step 6: Test Connection
+
+**⚠️ Always activate UV environment first:**
+
+```bash
+source .venv/bin/activate
+```
 
 ### Test Dremio Connection:
 ```python
@@ -174,7 +246,13 @@ Collection Summary:
 ✓ Data collection completed successfully!
 ```
 
-## Step 6: Usage Examples
+## Step 7: Usage Examples
+
+**Remember**: Always activate the UV environment before running any Python code:
+
+```bash
+source .venv/bin/activate
+```
 
 ### Example 1: Initialize Client with Token in Code
 
