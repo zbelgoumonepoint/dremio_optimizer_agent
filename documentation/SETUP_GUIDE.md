@@ -62,11 +62,33 @@ source .venv/bin/activate
 ```bash
 # Make sure you're in the UV environment (you should see .venv in your prompt)
 
-# Install all dependencies using UV (faster than pip)
-uv pip install fastapi "uvicorn[standard]" sqlalchemy psycopg2-binary pydantic pydantic-settings requests python-dotenv langchain langgraph langchain-openai opentelemetry-api opentelemetry-sdk python-loki certifi
+# Install all dependencies from pyproject.toml using UV sync (recommended)
+uv sync
+
+# This will:
+# - Read dependencies from pyproject.toml
+# - Create a uv.lock file for reproducible builds
+# - Install all production dependencies
+# - Install dev dependencies (pytest, ruff, etc.)
 
 # Verify installation
 python -c "from src.clients.dremio_client import DremioClient; print('✓ Installation successful!')"
+```
+
+### Install Production Dependencies Only
+
+If you don't need dev dependencies:
+
+```bash
+uv sync --no-dev
+```
+
+### Update Dependencies
+
+To update dependencies to latest versions:
+
+```bash
+uv sync --upgrade
 ```
 
 ### Alternative: Using Poetry or pip

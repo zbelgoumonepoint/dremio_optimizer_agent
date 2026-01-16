@@ -23,8 +23,8 @@ uv venv
 # 3. Activate environment
 source .venv/bin/activate
 
-# 4. Install dependencies
-uv pip install fastapi "uvicorn[standard]" sqlalchemy psycopg2-binary pydantic pydantic-settings requests python-dotenv langchain langgraph langchain-openai opentelemetry-api opentelemetry-sdk python-loki certifi
+# 4. Install dependencies from pyproject.toml
+uv sync
 
 # 5. Configure .env file
 cp .env.example .env
