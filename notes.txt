@@ -1,0 +1,238 @@
+A. Query-level data (MANDATORY)
+1️⃣ SQL text
+
+Source
+
+Dremio query history
+
+Job profiles / system tables
+
+REST API
+
+Used for
+
+Pattern detection (SELECT *, joins, filters)
+
+Rewrite suggestions
+
+Change diffing
+
+Agent insights
+
+Top slow queries
+
+Repeated anti-patterns
+
+High-risk SQL patterns
+
+2️⃣ Query plans & profiles (goldmine 💎)
+
+Source
+
+Dremio Query Profile
+
+EXPLAIN plans
+
+Job details API
+
+Contains
+
+Operator tree
+
+Row counts
+
+Scan size
+
+Join methods
+
+Reflection usage
+
+Agent insights
+
+Partition pruning applied?
+
+Join fan-out
+
+Exchange / shuffle hotspots
+
+Reflection mismatches
+
+This is your single most important signal.
+
+B. Metadata & catalog data
+3️⃣ Table & dataset metadata
+
+Source
+
+Dremio Catalog API
+
+Iceberg / Hive metastore
+
+Information schema
+
+Includes
+
+File format
+
+Partition columns
+
+Sort order
+
+Row counts
+
+Update frequency
+
+Agent insights
+
+Partition misuse
+
+Poor table design
+
+Missing reflections
+
+Schema evolution risks
+
+4️⃣ Reflection metadata (Dremio-specific)
+
+Source
+
+Dremio reflection APIs
+
+Includes
+
+Reflection type
+
+Refresh frequency
+
+Usage stats
+
+Agent insights
+
+Unused reflections (wasted cost)
+
+Missing reflections
+
+Reflections that don’t match query shapes
+
+C. Execution & resource data
+5️⃣ Execution metrics
+
+Source
+
+Dremio job profiles
+
+Cluster metrics (YARN / Kubernetes)
+
+Includes
+
+CPU
+
+Memory
+
+Disk spill
+
+Runtime per phase
+
+Agent insights
+
+Memory pressure
+
+Skewed joins
+
+Concurrency issues
+
+Bad query patterns during peak hours
+
+6️⃣ Storage-layer metadata
+
+Source
+
+Object storage metrics (S3 / ADLS)
+
+Iceberg metadata tables
+
+Includes
+
+File counts
+
+File sizes
+
+Partition layout
+
+Snapshot history
+
+Agent insights
+
+Small file problems
+
+Metadata bloat
+
+Missing compaction
+
+Inefficient partitioning
+
+D. User & usage context (often overlooked)
+7️⃣ User & workload metadata
+
+Source
+
+Dremio users / roles
+
+BI tool query tags
+
+Session metadata
+
+Agent insights
+
+Who runs expensive queries
+
+Which dashboards cause load
+
+Which teams need education vs automation
+
+8️⃣ Historical baselines
+
+Source
+
+Stored query history
+
+Past performance snapshots
+
+Agent insights
+
+Regression detection
+
+Anomaly detection
+
+“This query used to be fast”
+
+2️⃣ What this enables your agent to do
+
+Here’s the payoff.
+
+A. Issue detection (automated)
+Issue Data needed
+No partition pruning Plan + metadata
+Reflection unused Plan + reflection catalog
+Join fan-out Plan row counts
+SELECT * SQL text
+Small file problem Storage metadata
+VDS overuse Catalog lineage
+Expensive dashboards User + query frequency
+B. Root cause analysis (huge value)
+
+Example:
+
+“Why did yesterday’s dashboards slow down?”
+
+Agent can correlate:
+
+Query runtime ↑
+
+File count ↑
+
+New partition added
+
+Reflection refresh failed
+
+This is where LLM reasoning shines.
