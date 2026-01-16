@@ -11,6 +11,15 @@ This directory contains all documentation related to the conception, development
 - **[Setup Guide](SETUP_GUIDE.md)** - Complete installation and configuration instructions
 - **[Dremio Cloud Setup](DREMIO_CLOUD_SETUP.md)** - Dremio Cloud-specific configuration guide
 
+## Design & Planning
+
+- **[Data Collection Guide](DATA_COLLECTION_GUIDE.md)** - Comprehensive guide on what data to collect from Dremio
+  - Query-level data (SQL, plans, profiles)
+  - Metadata & catalog data
+  - Performance metrics
+  - User context and workload patterns
+- **[Design Notes](DESIGN_NOTES.txt)** - Raw planning notes and design decisions
+
 ## Technical Documentation
 
 - **[Dremio Cloud API Integration](DREMIO_CLOUD_API_COMPLETE.md)** - Complete guide to Cloud API implementation
