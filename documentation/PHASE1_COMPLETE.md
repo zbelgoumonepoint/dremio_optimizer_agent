@@ -2,7 +2,7 @@
 
 ## Summary
 
-Phase 1 of the Dremio Optimizer Agent is complete! All foundation components have been implemented.
+Phase 1 of the Sonepar Dremio is complete! All foundation components have been implemented.
 
 ## Completed Components
 

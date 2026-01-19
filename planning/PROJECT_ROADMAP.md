@@ -1,4 +1,4 @@
-# Dremio Optimizer Agent - Project Roadmap
+# Sonepar Dremio - Project Roadmap
 
 ## Executive Summary
 
@@ -444,7 +444,7 @@ Week 10-12  ██████████████████████�
 ## Team & Resources
 
 **Developer**: Zakaria BELGOUM
-**Repository**: https://github.com/zbelgoumonepoint/dremio_optimizer_agent
+**Repository**: https://github.com/zbelgoumonepoint/sonepar_dremio
 **Documentation**: `/documentation`
 **Planning**: `/planning`
 

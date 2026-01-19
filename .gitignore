@@ -73,3 +73,6 @@ dmypy.json
 
 # Poetry
 poetry.lock
+
+# Domain knowledge (personal learning, not for git)
+domain_knowledge/

@@ -1,6 +1,6 @@
 # Project Planning & Roadmap
 
-This directory contains all planning documents, phase breakdowns, and project roadmap for the Dremio Optimizer Agent.
+This directory contains all planning documents, phase breakdowns, and project roadmap for the Sonepar Dremio.
 
 ## Documents
 

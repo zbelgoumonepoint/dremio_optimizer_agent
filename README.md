@@ -1,4 +1,4 @@
-# Dremio Optimizer Agent
+# Sonepar Dremio
 
 **AI-powered query optimization and performance analysis for Dremio**
 
@@ -12,7 +12,7 @@ An intelligent agent that automatically analyzes Dremio query performance, detec
 
 ## 🎯 What It Does
 
-The Dremio Optimizer Agent:
+Sonepar Dremio:
 
 1. **📊 Collects** comprehensive data from Dremio (query history, execution profiles, metadata)
 2. **🔍 Analyzes** performance using 6+ specialized detectors
@@ -45,8 +45,8 @@ The Dremio Optimizer Agent:
 
 ```bash
 # Clone repository
-git clone https://github.com/zbelgoumonepoint/dremio_optimizer_agent.git
-cd dremio_optimizer_agent
+git clone https://github.com/zbelgoumonepoint/sonepar_dremio.git
+cd sonepar_dremio
 
 # Install UV (fast Python package manager)
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -347,7 +347,7 @@ The system detects **6+ types of performance issues**:
 ### Project Structure
 
 ```
-dremio_optimizer_agent/
+sonepar_dremio/
 ├── src/
 │   ├── api/                    # FastAPI routes and schemas
 │   ├── agents/                 # LangGraph AI agent and tools
@@ -462,7 +462,7 @@ Contributions are welcome! Please:
 
 ```bash
 # Clone your fork
-git clone https://github.com/YOUR_USERNAME/dremio_optimizer_agent.git
+git clone https://github.com/YOUR_USERNAME/sonepar_dremio.git
 
 # Install with dev dependencies
 uv sync
@@ -493,7 +493,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/zbelgoumonepoint/dremio_optimizer_agent/issues)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/zbelgoumonepoint/sonepar_dremio/issues)
 - **Documentation**: [Full documentation](documentation/)
 - **Email**: z.belgoum@groupeonepoint.com
 
@@ -546,8 +546,8 @@ Based on initial testing and benchmarks:
 
 **Built with ❤️ for the Dremio community**
 
-[Report Bug](https://github.com/zbelgoumonepoint/dremio_optimizer_agent/issues) ·
-[Request Feature](https://github.com/zbelgoumonepoint/dremio_optimizer_agent/issues) ·
+[Report Bug](https://github.com/zbelgoumonepoint/sonepar_dremio/issues) ·
+[Request Feature](https://github.com/zbelgoumonepoint/sonepar_dremio/issues) ·
 [Documentation](documentation/)
 
 </div>

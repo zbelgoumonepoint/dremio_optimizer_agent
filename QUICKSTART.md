@@ -5,7 +5,7 @@
 Before running **ANY** command or script in this project, always activate the UV virtual environment:
 
 ```bash
-cd /Users/z.belgoum/projects/dremio_optimizer_agent
+cd /Users/z.belgoum/projects/sonepar_dremio
 source .venv/bin/activate
 ```
 
@@ -15,7 +15,7 @@ You should see `(.venv)` in your terminal prompt.
 
 ```bash
 # 1. Navigate to project
-cd /Users/z.belgoum/projects/dremio_optimizer_agent
+cd /Users/z.belgoum/projects/sonepar_dremio
 
 # 2. Create UV environment (only once)
 uv venv
@@ -43,7 +43,7 @@ Every time you work on this project:
 
 ```bash
 # 1. Activate environment
-cd /Users/z.belgoum/projects/dremio_optimizer_agent
+cd /Users/z.belgoum/projects/sonepar_dremio
 source .venv/bin/activate
 
 # 2. Run your commands
@@ -56,7 +56,7 @@ python scripts/test_collection.py
 Add this to your `~/.zshrc` or `~/.bashrc`:
 
 ```bash
-alias dremio-env='cd /Users/z.belgoum/projects/dremio_optimizer_agent && source .venv/bin/activate'
+alias dremio-env='cd /Users/z.belgoum/projects/sonepar_dremio && source .venv/bin/activate'
 ```
 
 Then reload your shell:
@@ -87,7 +87,7 @@ python scripts/setup_db.py
 
 # Check if environment is activated
 python -c "import sys; print(sys.prefix)"
-# Should show: /Users/z.belgoum/projects/dremio_optimizer_agent/.venv
+# Should show: /Users/z.belgoum/projects/sonepar_dremio/.venv
 ```
 
 ## Troubleshooting
@@ -110,7 +110,7 @@ dremio-env
 ## Project Structure
 
 ```
-dremio_optimizer_agent/
+sonepar_dremio/
 ├── .venv/              ← UV virtual environment (activate this!)
 ├── .env                ← Your configuration (Dremio credentials)
 ├── src/                ← Source code

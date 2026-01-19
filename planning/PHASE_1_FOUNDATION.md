@@ -6,7 +6,7 @@
 
 ## Overview
 
-Establish the foundational infrastructure for the Dremio Optimizer Agent by building a robust data collection pipeline that extracts comprehensive performance data from both Dremio Cloud and on-premises deployments.
+Establish the foundational infrastructure for the Sonepar Dremio by building a robust data collection pipeline that extracts comprehensive performance data from both Dremio Cloud and on-premises deployments.
 
 ### Goals
 
@@ -59,7 +59,7 @@ Dremio (Cloud/On-prem)
 ### Directory Layout
 
 ```
-dremio_optimizer_agent/
+sonepar_dremio/
 ├── src/
 │   ├── config/
 │   │   ├── __init__.py

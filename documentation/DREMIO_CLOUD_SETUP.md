@@ -20,7 +20,7 @@ Based on your account information:
 4. Select **Account Settings**
 5. Navigate to **Personal Access Tokens**
 6. Click **New Token**
-7. Name: "Dremio Optimizer Agent"
+7. Name: "Sonepar Dremio"
 8. Expiration: Choose based on your security policy (30-90 days recommended)
 9. Click **Create**
 10. **IMPORTANT**: Copy the token immediately - format will be like `dremio_pat_xxxxxxxxxxxxx`
@@ -30,7 +30,7 @@ Based on your account information:
 I've already created a `.env` file for you with your Project ID. You just need to add your token:
 
 ```bash
-cd dremio_optimizer_agent
+cd sonepar_dremio
 ```
 
 Edit `.env` and replace `YOUR_PERSONAL_ACCESS_TOKEN_HERE` with your actual token:

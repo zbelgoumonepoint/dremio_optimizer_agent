@@ -2,7 +2,7 @@
 
 ## Summary
 
-Phase 1 of the Dremio Optimizer Agent has been successfully completed! The system can now:
+Phase 1 of the Sonepar Dremio has been successfully completed! The system can now:
 - ✅ Connect to **both Dremio Cloud and on-prem** deployments
 - ✅ Collect query history using Cloud-specific SQL API
 - ✅ Fetch catalog, reflections, and metadata

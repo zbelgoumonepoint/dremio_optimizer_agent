@@ -1,6 +1,6 @@
 # Documentation Index
 
-This directory contains all documentation related to the conception, development, and setup of the Dremio Optimizer Agent project.
+This directory contains all documentation related to the conception, development, and setup of the Sonepar Dremio project.
 
 ## Project Overview
 
@@ -140,7 +140,7 @@ This directory contains all documentation related to the conception, development
 
 ## Quick Links
 
-- **GitHub Repository**: https://github.com/zbelgoumonepoint/dremio_optimizer_agent
+- **GitHub Repository**: https://github.com/zbelgoumonepoint/sonepar_dremio
 - **Dremio Cloud**: https://api.dremio.cloud
 - **Dremio Documentation**: https://docs.dremio.com/cloud/
 

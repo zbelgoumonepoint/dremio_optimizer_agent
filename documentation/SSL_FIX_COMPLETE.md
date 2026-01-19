@@ -97,7 +97,7 @@ The current `DremioClient` is designed for on-prem Dremio. For Dremio Cloud, we 
 
 ```bash
 # Activate virtual environment
-cd /Users/z.belgoum/projects/dremio_optimizer_agent
+cd /Users/z.belgoum/projects/sonepar_dremio
 source .venv/bin/activate
 
 # Test connection

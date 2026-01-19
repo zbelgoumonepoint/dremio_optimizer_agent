@@ -1,4 +1,4 @@
-# Dremio Optimizer Agent - Setup Guide
+# Sonepar Dremio - Setup Guide
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ dremio_pat_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 **IMPORTANT**: Always work within the UV virtual environment for this project.
 
 ```bash
-cd dremio_optimizer_agent
+cd sonepar_dremio
 
 # Create UV virtual environment
 uv venv
@@ -108,7 +108,7 @@ pip install -e .
 **Before running any scripts or commands**, always activate the UV environment:
 
 ```bash
-cd /path/to/dremio_optimizer_agent
+cd /path/to/sonepar_dremio
 source .venv/bin/activate
 ```
 
@@ -116,7 +116,7 @@ To make this easier, you can add an alias to your shell profile (`~/.zshrc` or `
 
 ```bash
 # Add this to ~/.zshrc or ~/.bashrc
-alias dremio-env='cd /Users/z.belgoum/projects/dremio_optimizer_agent && source .venv/bin/activate'
+alias dremio-env='cd /Users/z.belgoum/projects/sonepar_dremio && source .venv/bin/activate'
 ```
 
 Then just run `dremio-env` to activate the environment and navigate to the project!

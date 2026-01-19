@@ -74,19 +74,19 @@ async def lifespan(app: FastAPI):
     # Startup
     setup_logging()
     setup_tracing()
-    print("🚀 Dremio Optimizer Agent API started")
+    print("🚀 Sonepar Dremio API started")
 
     yield
 
     # Shutdown
-    print("👋 Shutting down Dremio Optimizer Agent API")
+    print("👋 Shutting down Sonepar Dremio API")
 
 
 def create_app() -> FastAPI:
     """Create and configure FastAPI application."""
 
     app = FastAPI(
-        title="Dremio Optimizer Agent API",
+        title="Sonepar Dremio API",
         description="AI-powered query optimization and performance analysis for Dremio",
         version="1.0.0",
         docs_url="/docs",
